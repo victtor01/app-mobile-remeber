@@ -9,7 +9,7 @@ from "react-native";
 import style from './style'
 
 import Header from "../header";
-import Cateogories from "../categories";
+import Categories from "../categories";
 import Search from "../search";
 
 
@@ -63,6 +63,7 @@ export default function Notes () {
             },
         ]
     )
+    const [noteId, setNoteId] = useState(1)
 
     const Note = (data) => (
         
@@ -75,7 +76,7 @@ export default function Notes () {
         return (
             <View>
                 <Header/>
-                <Cateogories/>
+                <Categories get={noteId} set={setNoteId}/>
                 <Search/>
             </View>
         );

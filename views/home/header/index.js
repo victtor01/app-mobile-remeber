@@ -9,7 +9,7 @@ import style from './style'
 export default function Header () {
     return (
         <View style={style.container}>
-            <Text style={style.title}>MyApp</Text>
+            <Text style={style.title}>Lembreme</Text>
         </View>
     );
 }

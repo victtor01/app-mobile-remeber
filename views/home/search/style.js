@@ -18,7 +18,7 @@ const style = StyleSheet.create({
         borderRadius: 20,
         elevation: 1,
         padding: 10,
-        paddingLeft: 14
+        paddingLeft: 14,
     },
     buttonSearch: {
         backgroundColor: '#fff',

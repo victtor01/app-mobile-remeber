@@ -26,7 +26,11 @@ const style = StyleSheet.create({
     nameBox: {
         fontSize: 15,
         color: 'rgba(100,100,100,0.98)'
-    }
+    },
+    selected : {
+        backgroundColor: 'red',
+        color: '#fff'
+    } 
 })
 
 export default style;

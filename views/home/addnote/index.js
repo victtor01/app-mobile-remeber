@@ -1,6 +1,7 @@
 import React from "react";
 import { 
     Text,
+    TouchableOpacity,
     View
 } 
 from "react-native";
@@ -9,10 +10,15 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 
 import style from './style'
 
-export default function AddNote () {
+import { useNavigation } from '@react-navigation/native';
+
+export default function AddNote (modal) {
+
+    let navigation = useNavigation();
+
     return (
-        <View style={style.container}>
+        <TouchableOpacity onPress={() => navigation.navigate('AddNote')} activeOpacity={0.9} style={style.container}>
             <Text ><Ionicons name="add" size={27}></Ionicons></Text>
-        </View>
+        </TouchableOpacity>
     );
 }

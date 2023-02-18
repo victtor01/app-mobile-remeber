@@ -1,25 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { 
-    Text,
     View,
-    Image
+    ImageBackground,
+    KeyboardAvoidingView,
+    Platform
 } 
 from "react-native";
-
 import style from './style'
-
-import Header from './header';
-import Cateogories from "./categories";
 import Notes from "./notes";
 import AddNote from "./addnote";
-import Search from "./search";
 
 export default function Home () {
+
+    const [modal, setModal] = useState(false)
+
     return (
-        <View style={style.container}>
-            <Image resizeMode="cover" style={{position: 'absolute', height: '100%'}} source={require('../../assets/images/montanha.png')}/>
-            <Notes/>
-            <AddNote/>
-        </View>
+        <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : "height"} style={style.container} contentContainerStyle={{ paddingBottom: 2000 }}>
+            <ImageBackground resizeMode="cover" style={style.background} source={require('../../assets/images/montanha.png')}>
+                <Notes/>
+                <AddNote set={setModal} />
+            </ImageBackground>
+      </KeyboardAvoidingView>
     );
 }
