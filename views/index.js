@@ -1,27 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View} from 'react-native';
+import React, {useState} from 'react';
+import { StyleSheet} from 'react-native';
 import { NavigationContainer} from '@react-navigation/native';
-import { createStackNavigator, CardStyleInterpolators} from "@react-navigation/stack";
 import { SafeAreaView } from 'react-native-safe-area-context';
-const Stack = createStackNavigator();
+import { StatusBar } from 'expo-status-bar';
 
-import Home from './home';
-import AddNote from './note';
+//components
+import MyDrawer from './drawer';
+
 export default function Navigate() {
+
   return (
     <SafeAreaView style={styles.container}>
+      <StatusBar backgroundColor="#2c4d56" style="light"/>
       <NavigationContainer>
-          <StatusBar style='auto'/>
-          <Stack.Navigator initialRouteName='Home' 
-            screenOptions={{
-              gestureEnabled: true,
-              gestureDirection: "vertical",
-              cardStyle: { backgroundColor: '#fff',},
-              cardStyleInterpolator: CardStyleInterpolators.forVerticalIOS
-              }}>
-              <Stack.Screen options={{headerShown: false}} component={Home} name='Home'/>
-              <Stack.Screen options={{headerShown: false, cardStyle:{borderTopLeftRadius: 20,borderTopRightRadius: 20, backgroundColor: '#fff'}}} component={AddNote} name='AddNote'/>          
-          </Stack.Navigator>  
+          <MyDrawer/>
       </NavigationContainer>  
     </SafeAreaView>
   );

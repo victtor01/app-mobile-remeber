@@ -16,15 +16,16 @@ const style = StyleSheet.create({
         width: '100%',
     },
     box: {
-        backgroundColor: '#fff',
+        backgroundColor: 'rgba(240,240,240,1)',
         height: 80,
         marginBottom: 10,
         maxWidth: '100%',
-        borderRadius: 7,
+        borderRadius: 15,
         justifyContent: 'center',
         paddingLeft: 20,
         margin: 20,
-        marginTop: 30
+        marginTop: 30,
+        position: 'relative'
     },
 })
 

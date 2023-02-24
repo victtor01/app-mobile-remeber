@@ -3,12 +3,12 @@ import { StyleSheet } from "react-native";
 const style = StyleSheet.create({
     container : {
         position: 'relative',
-        height: 80,
+        height: 60,
         backgroundColor: '#2c4d56',
         justifyContent: 'center',
-        borderBottomLeftRadius: 15,
-        borderBottomRightRadius: 15,
-        paddingLeft: 20,
+        borderBottomLeftRadius: 5,
+        borderBottomRightRadius: 5,
+        paddingLeft: 30,
     },
     title: {
         fontSize: 25,

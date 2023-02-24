@@ -12,9 +12,9 @@ export default function Categories (note) {
 
     const [categorias, setCategorias] = useState(
         [
-            { id: 1, name: 'Principais' }, 
-            { id: 2,name: 'Aleatorios' },
-            { id: 3,name: 'Para hoje' }
+            { id: 1, name: 'Para Hoje' }, 
+            { id: 2,name: 'Essa semana' },
+            { id: 3,name: 'Sem data' }
         ]
     )
     

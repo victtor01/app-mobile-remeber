@@ -3,6 +3,8 @@ import { StyleSheet } from "react-native";
 const style = StyleSheet.create({
     container : {
         height: '100%',
+        position: 'relative',
+        flex: 1
     },
     modalContainer: {
         width: '100%',
@@ -18,11 +20,10 @@ const style = StyleSheet.create({
         color: 'red'
     },
     background: {
+        minHeight: '111%',
         flex: 1,
-        resizeMode: 'cover',
-        justifyContent: 'center',
-        ...StyleSheet.absoluteFillObject
-    }
+        position: 'absolute'
+    },
 
 })
 
